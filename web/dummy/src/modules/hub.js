@@ -5,7 +5,7 @@ import { Layout } from './layout.js'
 
 LOGGER.set(new ConsoleLogger('rs', 'DEBUG'))
 
-export const states$ = defAtom({})
+const states = defAtom({})
 
 const seed = {
   account: null,
@@ -16,4 +16,4 @@ const seed = {
 const app = defAtom(seed)
 const layout$ = fromView(app, { path: 'layout', tx: Layout })
 
-export { app, layout$ }
+export { states, app, layout$ }

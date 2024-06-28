@@ -1,5 +1,5 @@
-import Page from 'page/page.mjs'
 import { LOG } from '@at/utils'
+import Page from 'page/page.mjs'
 import { app } from './hub.js'
 
 const notFound = ({ params }) => {

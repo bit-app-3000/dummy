@@ -1,9 +1,9 @@
 import { beginTransaction } from '@thi.ng/atom'
-import { states$ } from './index.js'
+import { states } from './index.js'
 
 const tx = ({ id, state }) => {
   // LOG('TX', state)
-  const t = beginTransaction(states$)
+  const t = beginTransaction(states)
   t.resetInUnsafe([id, 'state'], state)
   t.commit()
 }
@@ -70,12 +70,11 @@ const disappear = (x, target) => {
 }
 
 const toggle = ({ id }) => e => {
-  const x = states$.deref()[id]
 
+  const x = states.deref()[id]
   // LOG('TOGGLE',  x)
 
   const { state } = x
-
   switch (state) {
     case 'hidden':
       return commit(x, 'appear')
