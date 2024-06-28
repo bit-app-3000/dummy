@@ -47,7 +47,7 @@ export const SVC = {
     lang: 'uk',
     port: 20020,
     canonical: 'https://dummy-3xu.pages.dev',
-    description: 'DMY',
+    description: 'DUMMY',
     color: '#5B8B7A',
     background: '#1C1B22'
   })

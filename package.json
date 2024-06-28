@@ -1,7 +1,7 @@
 {
-  "name": "dmy",
+  "name": "dummy",
   "version": "0.0.1",
-  "description": "dmy",
+  "description": "dummy",
   "private": true,
   "type": "module",
   "engines": {

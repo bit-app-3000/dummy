@@ -70,7 +70,6 @@ const disappear = (x, target) => {
 }
 
 const toggle = ({ id }) => e => {
-
   const x = states.deref()[id]
   // LOG('TOGGLE',  x)
 
