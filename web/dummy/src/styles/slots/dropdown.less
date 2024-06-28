@@ -1,0 +1,53 @@
+
+control {
+  display: inline-flex;
+  background-color: seagreen;
+}
+
+
+dropdown {
+  display: inline-flex;
+  position: relative;
+  gap: .5rem;
+
+  //grid-auto-flow: row;
+  //grid-template-rows: auto;
+  //
+  //padding: .5rem;
+
+  //display: inline-grid;
+  //place-self: center;
+
+
+
+
+
+  > menu {
+
+
+    width: max-content;
+    position: absolute;
+
+    //isolation: isolate;
+    z-index: min(10);
+
+
+    box-shadow: .0625rem .0625rem 1rem rgba(0, 0, 0, .4);
+
+  }
+
+}
+
+
+menu[state=in],
+menu[state=out] {
+  animation-name: dropdown;
+}
+
+
+@keyframes dropdown {
+  from {
+    opacity: 0;
+    transform: matrix(.15, 0, 0, .15, 0, 0);
+  }
+}

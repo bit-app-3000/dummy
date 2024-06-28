@@ -1,0 +1,90 @@
+@gap: .5rem;
+@t: calc(100% + @gap);
+
+
+// TOP
+[placement=top] {
+  bottom: @t;
+  left: 50%;
+  translate: -50% 0;
+  transform-origin: bottom center;
+}
+
+[placement=top-start] {
+  bottom: @t;
+  left: 0;
+  transform-origin: bottom left;
+}
+
+[placement=top-end] {
+  bottom: @t;
+  right: 0;
+  transform-origin: bottom right;
+}
+
+
+// BOTTOM
+[placement=bottom] {
+  top: @t;
+
+  left: 50%;
+  translate: -50% 0 0;
+  transform-origin: top center;
+}
+
+[placement=bottom-start] {
+  top: @t;
+  left: 0;
+  transform-origin: top left;
+}
+
+[placement=bottom-end] {
+  top: @t;
+  right: 0;
+  transform-origin: top right;
+}
+
+
+// LEFT
+[placement=left] {
+  right: @t;
+  top: 50%;
+  translate: 0 -50%;
+  transform-origin: center right;
+}
+
+[placement=left-start] {
+  right: @t;
+  transform-origin: top right;
+}
+
+[placement=left-end] {
+  bottom: 0;
+  right: @t;
+  transform-origin: bottom right;
+}
+
+
+// RIGHT
+[placement=right] {
+
+
+  left: @t;
+  top: 50%;
+  translate: 0 -50%;
+  transform-origin: center left;
+
+}
+
+[placement=right-start] {
+  left: @t;
+  transform-origin: top left;
+}
+
+[placement=right-end] {
+
+  left: @t;
+  bottom: 0;
+  transform-origin: bottom left;
+
+}

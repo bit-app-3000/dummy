@@ -1,0 +1,12 @@
+{
+  "name": "@at/thing",
+  "type": "module",
+  "main": "src/index.js",
+  "devDependencies": {
+    "@thi.ng/atom": "^5.3.1",
+    "@thi.ng/ksuid": "^3.2.53",
+    "@thi.ng/logger": "^3.0.13",
+    "@thi.ng/rdom": "^1.4.1",
+    "@thi.ng/rstream": "^8.5.1"
+  }
+}

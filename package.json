@@ -1,0 +1,22 @@
+{
+  "name": "dmy",
+  "version": "0.0.1",
+  "description": "dmy",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": "*",
+    "npm": "*"
+  },
+  "workspaces": [
+    "./packages/*",
+    "./web/*"
+  ],
+  "devDependencies": {
+    "standard": "^17.1.0"
+  },
+  "scripts": {
+    "test": "standard **/*.js",
+    "fix": "standard **/*.js --fix"
+  }
+}

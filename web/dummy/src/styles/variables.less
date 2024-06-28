@@ -1,0 +1,199 @@
+//  Responsive
+
+@breakMobile: 480px;
+@breakTablet: 768px;
+@breakDesktop: 992px;
+@breakLarge: 1300px;
+@breakWide: 1920px;
+
+@breakPureMax: (@breakMobile - 1px);
+@breakMobileMax: (@breakTablet - 1px);
+@breakTabletMax: (@breakDesktop - 1px);
+@breakDesktopMax: (@breakLarge - 1px);
+@breakLargeMax: (@breakWide - 1px);
+
+@pure: ~'only screen and (max-width: @{breakPureMax})';
+@mobile: ~'only screen and (min-width: @{breakMobile}) and (max-width: @{breakMobileMax})';
+@tablet: ~'only screen and (min-width: @{breakTablet}) and (max-width: @{breakTabletMax})';
+@desktop: ~'only screen and (min-width: @{breakDesktop}) and (max-width: @{breakDesktopMax})';
+@large: ~'only screen and (min-width: @{breakLarge}) and (max-width: @{breakLargeMax})';
+@wide: ~'only screen and (min-width: @{breakWide})';
+
+@alongMobile: ~'only screen and (max-width: @{breakMobileMax})';
+@alongTablet: ~'only screen and (max-width: @{breakTabletMax})';
+@alongDesktop: ~'only screen and (max-width: @{breakDesktopMax})';
+@alongLarge: ~'only screen and (max-width: @{breakLargeMax})';
+
+@largestPure: ~'only screen and (min-width: @{breakPureMax})';
+@largestMobile: ~'only screen and (min-width: @{breakTablet})';
+@largestTablet: ~'only screen and (min-width: @{breakDesktop})';
+@largestDesktop: ~'only screen and (min-width: @{breakLarge})';
+
+
+// Font Face
+
+/*@font-face {
+  font-family: 'Samsung Sharp Sans';
+  font-display: optional;
+  font-style: normal;
+  font-weight: 400;
+  src: local('Samsung Sharp Sans'), url('/fonts/samsungsharpsans.woff');
+}
+
+
+@font-face {
+  font-family: 'Samsung Sharp Sans';
+  font-display: optional;
+  font-style: normal;
+  font-weight: 500;
+  src: local('Samsung Sharp Sans'), url('/fonts/samsungsharpsans-medium.woff');
+}
+
+
+@font-face {
+  font-family: 'Samsung Sharp Sans';
+  font-display: optional;
+  font-style: normal;
+  font-weight: 700;
+  src: local('Samsung Sharp Sans'), url('/fonts/samsungsharpsans-bold.woff');
+}
+
+//@f:'Samsung Sharp Sans';
+
+*/
+
+@f: 'Segoe UI';
+//@f: 'Segoe UI Emoji';
+//@f: 'Source Sans Pro';
+//@f: 'Roboto';
+
+//@midFontFamily: @f, 'Droid Sans', 'SF Pro', 'Open Sans', Helvetica, 'Helvetica Neue', Arial, FreeSans, sans-serif;
+// 'Droid Sans Mono', 'SF Mono', 'Roboto Mono', 'Ubuntu Monospace', 'Noto Mono', 'Oxygen Mono', 'Liberation Mono', 'Liberation Mono', 'Courier New',
+
+// Font
+@midFontFamily: @f, sans-serif;
+@boldFontFamily: @f, sans-serif;
+
+@pageFontFamily: @f, sans-serif;
+@headerFontFamily: @f, sans-serif;
+@monoFontFamily: Monaco, Menlo, Consolas, monospace;
+
+
+// Page
+@pageLineHeight: 1.5;
+@pageFontSize: 16px;
+
+
+@pageBackgroundColor: #1C1B22;
+@pageColor: #fff;
+
+
+@pageBackgroundColorInvert: #EDEDED;
+@pageColorInvert: #1B1B1B;
+
+
+// Grid
+@cols: 12;
+@gap: 1.25rem;
+@pad: 1.25rem;
+
+// Headers
+@h1: 1.5rem;
+@h2: 1.5rem;
+@h3: 1.25rem;
+@h4: 1rem;
+@h5: 1rem;
+@h6: 1rem;
+
+
+//  Color
+@b1: #75C441;
+@b2: #5B8B7A;
+@b3: #c9e8ee;
+@b4: #00669f;
+
+@green: rgba(67, 181, 129, 1);
+@red: rgba(240, 71, 71, 1);
+@blue: rgba(114, 137, 218, 1);
+@yellow: rgba(250, 166, 26, 1);
+@gray: rgba(66, 70, 77, 1);
+
+@invalid: @red;
+@valid: @green;
+@warning: @yellow;
+@normal: @blue;
+
+// Link
+@link: @b1;
+@linkColor: @link;
+@linkColorHover: @link;
+@linkUnderline: none;
+@linkUnderlineHover: none;
+@linkTransition: ease-out;
+
+
+// APP new
+
+//:root {
+//  --asideDurationIn: 300ms;
+//  --asideDurationOut: 150ms;
+//}
+
+@duration: 500ms;
+
+/*:root {
+
+  --fallback-p: #7582ff;
+  --fallback-pc: #050617;
+  --fallback-s: #ff71cf;
+  --fallback-sc: #190211;
+  --fallback-a: #00c7b5;
+  --fallback-ac: #000e0c;
+  --fallback-n: #2a323c;
+  --fallback-nc: #a6adbb;
+  --fallback-b1: #1d232a;
+  --fallback-b2: #191e24;
+  --fallback-b3: #15191e;
+  --fallback-bc: #a6adbb;
+  --fallback-in: #00b3f0;
+  --fallback-inc: #000000;
+  --fallback-su: #00ca92;
+  --fallback-suc: #000000;
+  --fallback-wa: #ffc22d;
+  --fallback-wac: #000000;
+  --fallback-er: #ff6f70;
+  --fallback-erc: #000000;
+
+
+  --in: .7206 .191 231.6;
+  --su: 64.8% .15 160;
+  --wa: .8471 .199 83.87;
+  --er: .7176 .221 22.18;
+  --pc: .13138 .0392 275.75;
+  --sc: .1496 .052 342.55;
+  --ac: .14902 .0334 183.61;
+  --inc: 0 0 0;
+  --suc: 0 0 0;
+  --wac: 0 0 0;
+  --erc: 0 0 0;
+  --rounded-box: 1rem;
+  --rounded-btn: .5rem;
+  --rounded-badge: 1.9rem;
+  --animation-btn: .25s;
+  --animation-input: .2s;
+  --btn-focus-scale: .95;
+  --border-btn: 1px;
+  --tab-border: 1px;
+  --tab-radius: .5rem;
+  --p: .6569 .196 275.75;
+  --s: .748 .26 342.55;
+  --a: .7451 .167 183.61;
+  --n: .313815 .021108 254.139175;
+  --nc: .746477 .0216 264.435964;
+  --b1: .253267 .015896 252.417568;
+  --b2: .232607 .013807 253.100675;
+  --b3: .211484 .01165 254.087939;
+  --bc: .746477 .0216 264.435964;
+
+  --tw-bg-opacity: 1;
+}*/

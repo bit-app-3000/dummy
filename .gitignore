@@ -1,0 +1,10 @@
+.idea
+node_modules
+
+.run
+.wrangler
+
+dist
+zz
+
+meta.json

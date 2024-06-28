@@ -1,0 +1,9 @@
+{
+  "name": "@at/utils",
+  "type": "module",
+  "main": "src/index.js",
+  "dependencies": {
+    "nanoid": "^5.0.7",
+    "page": "^1.11.6"
+  }
+}

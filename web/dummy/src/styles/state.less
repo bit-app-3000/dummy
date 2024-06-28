@@ -1,0 +1,53 @@
+[state=in],
+[state=out],
+[state=appear],
+[state=disappear] {
+
+
+  user-select: none;
+  pointer-events: none;
+
+  backface-visibility: hidden;
+  contain: style layout;
+
+  // animation-fill-mode: forwards;
+  // animation-iteration-count: 1;
+  // animation-delay: unset;
+
+}
+
+[state=appear],
+[state=disappear] {
+  visibility: hidden;
+  animation-name: slotAppearDisappear;
+}
+
+[state=in],
+[state=out] {
+
+
+  will-change: transform;
+
+  animation-duration: @duration;
+  animation-timing-function: cubic-bezier(0, 0, .2, 1); // cubic-bezier(.05, .7, .1, 1);
+
+}
+
+[state=hidden] {
+  display: none;
+}
+
+[state=in] {
+  animation-direction: normal;
+}
+
+[state=out] {
+  animation-direction: reverse;
+}
+
+
+@keyframes slotAppearDisappear {
+  from {
+    opacity: 1;
+  }
+}

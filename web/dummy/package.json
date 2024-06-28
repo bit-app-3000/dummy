@@ -1,0 +1,11 @@
+{
+  "name": "@web/dummy",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "dummy": "npm start -w @at/build dummy",
+    "dummy:build": "npm start -w @at/build dummy production",
+    "dummy:deploy": "cd ../../ && wrangler pages deploy dist/dummy --project-name dummy --commit-dirty --branch main",
+    "dummy:buid:deploy": "npm run dummy:build & npm run dummy:deploy"
+  }
+}

@@ -1,0 +1,27 @@
+doctype html
+html(lang= svc.lang)
+    head
+        base(href='/')
+
+        title= svc.title
+
+        meta(charset='utf-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1, user-scalable=no' )
+        meta(name='description' content= svc.description)
+
+        link(rel='stylesheet' href= svc.style)
+        link(rel='alternate icon' sizes='16x16' href= svc.favicon)
+
+
+    body
+        include sprite.pug
+        noscript= svc.noScript
+        script(type='module' src= svc.app async)
+
+        unless svc.isProd
+            script(type='module').
+              let eventSource = new EventSource('/esbuild');
+              eventSource.addEventListener('change', () => location.reload());
+              window.addEventListener('beforeunload', () => eventSource.close());
+
+        shell

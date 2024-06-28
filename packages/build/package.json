@@ -1,0 +1,15 @@
+{
+  "name": "@at/build",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node --throw-deprecation --trace-warnings ."
+  },
+  "devDependencies": {
+    "esbuild": "^0.21.5",
+    "fs-extra": "^11.2.0",
+    "less": "^4.2.0",
+    "pug": "^3.0.3",
+    "wrangler": "^3.62.0"
+  }
+}
